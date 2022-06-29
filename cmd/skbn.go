@@ -1,22 +1,14 @@
-package main
+package cmd
 
 import (
 	"fmt"
 	"io"
 	"log"
-	"os"
 
-	"github.com/nuvo/skbn/pkg/skbn"
+	"github.com/syst0m/skbn/pkg/skbn"
 
 	"github.com/spf13/cobra"
 )
-
-func main() {
-	cmd := NewRootCmd(os.Args[1:])
-	if err := cmd.Execute(); err != nil {
-		log.Fatal("Failed to execute command")
-	}
-}
 
 // NewRootCmd represents the base command when called without any subcommands
 func NewRootCmd(args []string) *cobra.Command {
