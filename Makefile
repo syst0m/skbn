@@ -8,7 +8,7 @@ DOCKER_USER := $(shell printenv DOCKER_USER)
 DOCKER_PASSWORD := $(shell printenv DOCKER_PASSWORD)
 TRAVIS := $(shell printenv TRAVIS)
 
-all: bootstrap build docker push
+all: build docker push
 
 fmt:
 	go fmt ./pkg/... ./cmd/...
@@ -37,13 +37,6 @@ ifdef DOCKER_PASSWORD
 endif
 endif
 endif
-
-bootstrap:
-ifndef HAS_DEP
-	wget -q -O $(GOPATH)/bin/dep https://github.com/golang/dep/releases/download/$(DEP_VERSION)/dep-linux-amd64
-	chmod +x $(GOPATH)/bin/dep
-endif
-	dep ensure
 
 dist:
 	mkdir -p $(DIST)
