@@ -23,7 +23,7 @@ build: fmt vet
 # Build skbn docker image
 docker: fmt vet
 	cp bin/skbn skbn
-	docker build -t nuvo/skbn:latest .
+	docker build -t syst0m/skbn:latest .
 	rm skbn
 
 

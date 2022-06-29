@@ -5,6 +5,7 @@
 [![license](https://img.shields.io/github/license/nuvo/skbn.svg)](https://github.com/nuvo/skbn/blob/master/LICENSE)
 
 # Skbn
+(Forked from: [nuvo/skbn](https://github.com/nuvo/skbn))
 
 Skbn is a tool for copying files and directories between Kubernetes and cloud storage providers. It is named after the 1981 video game [Sokoban](https://en.wikipedia.org/wiki/Sokoban).
 Skbn uses an in-memory buffer for the copy process, to avoid excessive memory consumption.
